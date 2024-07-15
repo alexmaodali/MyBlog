@@ -1,3 +1,5 @@
+# JavaBasic
+
 ## String API
 
 ![stringApi](./statics/images/stringapi.png)
@@ -769,6 +771,7 @@ append = true -> 追加管道
 ![gag](./statics/images/bs1.png)
 用线程池优化
 ![gag](./statics/images/bs2.png)
+
 ### 配置多开
 
 edit Configuration -> bulid and run -> modify options -> mutiple
