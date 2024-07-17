@@ -717,11 +717,11 @@ append = true -> 追加管道
 
 ![gag](./statics/images/udp2.png)
 
-##### 一发一收案例
+##### 一发一收案例 客户端发一个 服务端收一个
 
 ![gag](./statics/images/udp4.png)
 
-##### 多发多收案例
+##### 多发多收案例 客户端一直发 服务端一直收
 
 ![gag](./statics/images/udp1.png)
 
@@ -733,7 +733,7 @@ append = true -> 追加管道
 
 ![gag](./statics/images/tcp3.png)
 
-##### TCP 一对一
+##### TCP 一对一 客户端发一个 服务端收一个
 
 ![gag](./statics/images/tcpj.png)
 
@@ -741,14 +741,14 @@ append = true -> 追加管道
 ![gag](./statics/images/demo0.png)
 ![gag](./statics/images/demo.png)
 
-##### TCP 多对多
+##### TCP 多对多 客户端一直发 服务端一直收
 
 ![gag](./statics/images/demo9.png)
 离线处理
 
 ![gag](./statics/images/abc.png)
 
-##### TCP 支持与多个客户端同时通信
+##### TCP 支持与多个客户端同时通信 一个服务端 多个客户端
 
 ![gag](./statics/images/tcpp.png)
 
