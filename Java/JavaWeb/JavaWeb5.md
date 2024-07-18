@@ -163,8 +163,28 @@ springboot start 中规定了 lombok 版本,所有这里无需指定版本
     public List<User> list(String name,Integer age);
 ```
 
-## MyBatis XML 文件
+## MyBatis XML 映射文件
 
 ![img](./newimg/JavaWeb5_IMG/xml1.png)
 
 ### MyBatisX Plugins
+
+## 动态 SQL
+
+### <if> <where> <set>
+
+![img](./newimg/JavaWeb5_IMG/if.png)
+
+![img](./newimg/JavaWeb5_IMG/set.png)
+
+### <foreach>
+
+![img](./newimg/JavaWeb5_IMG/foreach.png)
+
+### <sql> <include>
+
+![img](./newimg/JavaWeb5_IMG/sql.png)
+
+## PageHelper 插件 实现分页查询
+
+![img](./newimg/JavaWeb5_IMG/page.png)
