@@ -11,6 +11,29 @@ DBMS
 
 ![img](./newimg/JavaWeb4_IMG/sql1.png)
 
+## 常见数据类型
+
+```
+数值类型
+tinyint unsigned smallint mediumint
+int bigint float double(5,2) decimal
+字符类型
+char varchar tinyblob tinytext blob
+text mediumblob mediumtext longblob longtext
+
+phone char(11)
+username(varchar(20))
+日期类型
+date time year datetime timestamp
+
+birthday date
+update_time datetime
+```
+
+![img](./newimg/JavaWeb4_IMG/sql3.png)
+![img](./newimg/JavaWeb4_IMG/sql4.png)
+![img](./newimg/JavaWeb4_IMG/sql5.png)
+
 ## DDL
 
 ```
@@ -88,25 +111,63 @@ data query ...
 
 ![img](./newimg/JavaWeb4_IMG/sql2.png)
 
-## 常见数据类型
+## 多表设计
+
+一对多 多对多 一对一
+
+### 一对多
+
+![imgl](./newimg/JavaWeb4_IMG/muti0.png)
+
+这样的表虽然添加了 dept_id，但只是逻辑上有了联系，要让数据库层面有联系，应该用外键来约束
+
+![imgl](./newimg/JavaWeb4_IMG/fk0.png)
+![imgl](./newimg/JavaWeb4_IMG/fk1.png)
+逻辑外键：不加外键约束，用代码实现逻辑上的外键
+
+### 一对一
+
+![imgl](./newimg/JavaWeb4_IMG/muti2.png)
+
+### 多对多
+
+![imgl](./newimg/JavaWeb4_IMG/muti3.png)
+
+### 多表查询
+
+#### 内连接
+
+A 和 B 的交集
+![imgl](./newimg/JavaWeb4_IMG/join1.png)
+
+#### 外连接
+
+A B 交集和一个 A 或 B 满足条件的集合
+![imgl](./newimg/JavaWeb4_IMG/join2.png)
+
+#### 子查询
+
+![imgl](./newimg/JavaWeb4_IMG/join4.png)
+
+![imgl](./newimg/JavaWeb4_IMG/join3.png)
+![imgl](./newimg/JavaWeb4_IMG/join.png)
+
+## 事务
 
 ```
-数值类型
-tinyint unsigned smallint mediumint
-int bigint float double(5,2) decimal
-字符类型
-char varchar tinyblob tinytext blob
-text mediumblob mediumtext longblob longtext
-
-phone char(11)
-username(varchar(20))
-日期类型
-date time year datetime timestamp
-
-birthday date
-update_time datetime
+start transiction / begin
+commit
+rollback          //一旦执行错误，可以回滚数据
 ```
 
-![img](./newimg/JavaWeb4_IMG/sql3.png)
-![img](./newimg/JavaWeb4_IMG/sql4.png)
-![img](./newimg/JavaWeb4_IMG/sql5.png)
+### 特性
+
+![imgl](./newimg/JavaWeb4_IMG/te.png)
+
+## 索引
+
+默认 B+Tree
+![imgl](./newimg/JavaWeb4_IMG/index.png)
+![imgl](./newimg/JavaWeb4_IMG/index2.png)
+
+![imgl](./newimg/JavaWeb4_IMG/index1.png)
