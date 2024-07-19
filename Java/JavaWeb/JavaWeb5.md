@@ -188,3 +188,135 @@ springboot start 中规定了 lombok 版本,所有这里无需指定版本
 ## PageHelper 插件 实现分页查询
 
 ![img](./newimg/JavaWeb5_IMG/page.png)
+
+## 文件上传
+
+前端文件上传三要素
+
+```
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>uploadFile</title>
+  </head>
+  <body>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      姓名：<input type="text" name="username" /><br />
+      年龄：<input type="text" name="age" /><br />
+      头像：<input type="file" name="image" /><br />
+      <input type="submit" value="提交" />
+    </form>
+  </body>
+</html>
+
+
+```
+
+```
+@PostMapping("/upload")
+public Result upload(String username, Integer age, MultipartFile image) {
+    log.info("文件上传:{} {} {}", username, age, image);
+    return Result.success();
+}
+```
+
+这样上传会产生 temp 文件，请求后 temp 文件自动删除了。
+
+### 存储上传的文件
+
+#### 本地存储
+
+![img](./newimg/JavaWeb5_IMG/upload.png)
+
+```
+@PostMapping("/upload")
+public Result upload(String username, Integer age, MultipartFile image) throws Exception {
+    log.info("文件上传:{} {} {}", username, age, image);
+    String originalFilename = image.getOriginalFilename();
+    String newFileName = UUID.randomUUID()
+            .toString() + originalFilename
+            .substring(originalFilename
+                    .lastIndexOf("."));
+    image.transferTo(new File("E:/images/" + newFileName));
+    return Result.success();
+}
+```
+
+#### 配置文件上传大小
+
+```
+spring.servlet.mutipart.max-file-size=10MB
+spring.servlet.mutipart.max-request-size=100MB
+```
+
+#### 阿里云 云服务 OSS 对象存储服务
+
+![img](./newimg/JavaWeb5_IMG/oss.png)
+
+![img](./newimg/JavaWeb5_IMG/oss1.png)
+
+![img](./newimg/JavaWeb5_IMG/oss2.png)
+![img](./newimg/JavaWeb5_IMG/oss3.png)
+
+![img](./newimg/JavaWeb5_IMG/oss4.png)
+
+## 修改员工
+
+### 查询回显
+
+```
+@Select("select * from emp where id=#{id}")
+Emp getById(Integer id);
+
+@GetMapping("/{id}")
+public Result getById(@PathVariable Integer id) {
+    log.info("\n\n当前查询 ID ==> {}\n\n", id);
+    Emp emp = empService.getById(id);
+    return Result.success(emp);
+}
+```
+
+### 修改员工
+
+![img](./newimg/JavaWeb5_IMG/update.png)
+![img](./newimg/JavaWeb5_IMG/update1.png)
+
+## properties 文件以及其他操作
+
+![img](./newimg/JavaWeb5_IMG/prop1.png)
+
+spring 提供了三种配置文件
+
+```
+application.properties
+application.yml
+application.yaml
+
+xml:臃肿
+properties:结构层次不清晰
+yaml:简洁 结构清晰
+```
+
+### yaml 常见数据类型
+
+```
+对象/Map集合
+
+user:
+    name: Alex
+    age: 33
+
+数组/List/Set
+hobby:
+    -sing
+    -dance
+    -basketball
+```
+
+### @Config..
+
+@Value 只能一个一个注入
+@Config..批量注入
+![img](./newimg/JavaWeb5_IMG/config.png)
