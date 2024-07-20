@@ -165,3 +165,105 @@ javax.servlet.Filter
 #### 登录拦截
 
 ![img](./newimg/JavaWeb6_IMG/in0.png)
+
+# 全局异常捕获器
+
+![img](./newimg/JavaWeb6_IMG/ex.png)
+
+# Spring 事务管理 AOP
+
+## 事务
+
+![img](./newimg/JavaWeb6_IMG/sr.png)
+![img](./newimg/JavaWeb6_IMG/sr1.png)
+![img](./newimg/JavaWeb6_IMG/sr2.png)
+
+### rollback
+
+![img](./newimg/JavaWeb6_IMG/sr3.png)
+
+### propagation
+
+![img](./newimg/JavaWeb6_IMG/sr4.png)
+![img](./newimg/JavaWeb6_IMG/sr5.png)
+![img](./newimg/JavaWeb6_IMG/sr6.png)
+
+## AOP
+
+![img](./newimg/JavaWeb6_IMG/aop.png)
+
+### 快速入门
+
+![img](./newimg/JavaWeb6_IMG/aop2.png)
+![img](./newimg/JavaWeb6_IMG/aop1.png)
+
+### 核心概念
+
+![img](./newimg/JavaWeb6_IMG/aop3.png)
+![img](./newimg/JavaWeb6_IMG/aop5.png)
+
+### 通知
+
+![img](./newimg/JavaWeb6_IMG/noti.png)
+
+#### 执行顺序
+
+![img](./newimg/JavaWeb6_IMG/noti2.png)
+
+### PointCut 切入点表达式
+
+![img](./newimg/JavaWeb6_IMG/noti1.png)
+![img](./newimg/JavaWeb6_IMG/noti3.png)
+
+![img](./newimg/JavaWeb6_IMG/noti4.png)
+![img](./newimg/JavaWeb6_IMG/noti5.png)
+
+![img](./newimg/JavaWeb6_IMG/log.png)
+![img](./newimg/JavaWeb6_IMG/an.png)
+
+### 连接点
+
+![img](./newimg/JavaWeb6_IMG/join.png)
+
+# SpringBoot 原理篇
+
+## config
+
+![img](./newimg/JavaWeb6_IMG/confi.png)
+![img](./newimg/JavaWeb6_IMG/confi1.png)
+![img](./newimg/JavaWeb6_IMG/confi2.png)
+![img](./newimg/JavaWeb6_IMG/confi4.png)
+
+## Bean 的管理
+
+@Component @Controller @Service @Repository
+
+### Bean 获取
+
+![img](./newimg/JavaWeb6_IMG/confi0.png)
+
+### 作用域
+
+![img](./newimg/JavaWeb6_IMG/bean.png)
+
+![img](./newimg/JavaWeb6_IMG/bean1.png)
+
+### 第三方 Bean
+
+![img](./newimg/JavaWeb6_IMG/bean2.png)
+
+## 起步依赖
+
+maven 的依赖传递
+
+## 自动配置
+
+![img](./newimg/JavaWeb6_IMG/s.png)
+
+![img](./newimg/JavaWeb6_IMG/s1.png)
+![img](./newimg/JavaWeb6_IMG/s2.png)
+
+### 原理
+
+![img](./newimg/JavaWeb6_IMG/s3.png)
+![img](./newimg/JavaWeb6_IMG/s4.png)
