@@ -1,4 +1,3 @@
-# JavaBasic
 
 ## String API
 

@@ -102,7 +102,7 @@ springboot start 中规定了 lombok 版本,所有这里无需指定版本
     mybatis.configuration.log-impl=org.apache.ibatis.logging.stdout.StdOutImpl
 
     //预编译：性能高 防止SQL注入
-    Preparing: delete from emp where id = ?
+    Preparing : delete from emp where id = ?
     Parameters: 16 (Integer)
 ```
 
@@ -122,7 +122,7 @@ springboot start 中规定了 lombok 版本,所有这里无需指定版本
 ### 删
 
 ```
-    //删除成功返回1 失败0    ${value} SQL拼接(不好)
+    //删除成功返回1 失败0    使用 ${value} 拼接有SQL注入风险
     @Delete("DELETE FROM emp WHERE id = #{id}")
     public void delete(Integer id);
 ```
@@ -157,9 +157,8 @@ springboot start 中规定了 lombok 版本,所有这里无需指定版本
     //性能低 不安全 存在SQL注入风险
     @Select("SELECT * FROM user WHERE name LIKE '%${name}%' AND age=#{age}")
 
-    //推荐concat
+    //推荐使用Mysql内置函数concat
     @Select("SELECT * FROM user WHERE name LIKE concat('%',#{name},'%') AND age=#{age}")
-
     public List<User> list(String name,Integer age);
 ```
 
