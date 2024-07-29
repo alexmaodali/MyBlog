@@ -1,0 +1,170 @@
+{
+	// And keybindings.json file
+	"diffEditor.wordWrap": "off",
+	"editor.acceptSuggestionOnEnter": "off",
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.inlayHints.enabled": "off",
+	"editor.tabCompletion": "on",
+	"editor.wordWrap": "off",
+	"files.autoSave": "afterDelay",
+	"security.workspace.trust.untrustedFiles": "open",
+	"workbench.startupEditor": "none",
+	"editor.codeActionsOnSave": {
+		"source.addMissingImports": "explicit",
+		"source.organizeImports": "explicit"
+	},
+	"workbench.colorCustomizations": {
+		"editor.lineHighlightBackground": "#1073cf2d",
+		"editor.lineHighlightBorder": "#9fced11f"
+	},
+	"editor.acceptSuggestionOnCommitCharacter": false,
+	"editor.fontLigatures": true,
+	"editor.fontVariations": false,
+	"editor.formatOnPaste": true,
+	"editor.formatOnSave": true,
+	"editor.guides.bracketPairs": false,
+	"editor.guides.indentation": false,
+	"editor.linkedEditing": true,
+	"explorer.confirmDelete": false,
+	"explorer.confirmDragAndDrop": false,
+	"hediet.vscode-drawio.resizeImages": null,
+	"liveServer.settings.donotShowInfoMsg": true,
+	"liveServer.settings.donotVerifyTags": true,
+	"eslint.codeActionsOnSave.rules": null,
+	"zenMode.hideLineNumbers": false,
+	"zenMode.fullScreen": false,
+	"zenMode.centerLayout": false,
+	"zenMode.showTabs": "multiple",
+	"explorer.compactFolders": false,
+	"extensions.autoUpdate": false,
+	"eslint.workingDirectories": [{ "mode": "auto" }],
+	"diffEditor.ignoreTrimWhitespace": false,
+	"breadcrumbs.enabled": false,
+	"editor.stickyScroll.enabled": false,
+	"window.zoomLevel": 2,
+	"tabnine.experimentalAutoImports": true,
+	"security.allowedUNCHosts": ["wsl.localhost"],
+	// ------------------配置eslint--------------------
+	"eslint.format.enable": true,
+	"eslint.validate": [
+		"javascript",
+		"vue",
+		"html",
+		"javascriptreact",
+		"vue-html",
+		"typescript"
+	],
+	// ------------------配置eslint--------------------
+	// --------------------  vetur 配置  --------------------
+	// vue文件默认格式化工具：vetur
+	"[vue]": {
+		"editor.defaultFormatter": "octref.vetur"
+	},
+	// 这个按用户自身习惯选择
+	"vetur.format.defaultFormatter.html": "js-beautify-html",
+	// 让vue中的js按编辑器自带的ts格式进行格式化
+	//  "vetur.format.defaultFormatter.js": "vscode-typescript",
+	// 让vue中的js按prettier进行格式化 用这个
+	"vetur.format.defaultFormatter.js": "prettier",
+	"vetur.format.defaultFormatterOptions": {
+		"js": "prettier",
+		"js-beautify-html": {
+			"wrap_attributes": "aligned-multiple" //当超出折行长度时，将属性进行垂直对齐
+		},
+		"prettyhtml": {
+			"tabWidth": 4, // 会忽略vetur的tabSize配置
+			"printWidth": 100, //每行100字符
+			"singleQuote": true, //是否使用单引号
+			"semi": true, // 句尾是否加;
+			"wrapAttributes": false,
+			"sortAttributes": false
+		},
+		//vue中的js生效
+		"prettier": {
+			"semi": true, // 句尾是否加;
+			"singleQuote": true, //是否使用单引号
+			"trailingComma": "all" //禁止随时添加逗号
+		}
+	},
+	// --------------------  vetur 配置  --------------------
+	// --------------------  prettier 配置(以下配置主要针对.js)  --------------------
+	"prettier.useEditorConfig": false, // 不使用editorConfig配置文件设置才生效
+	"prettier.semi": true, // 句尾是否加;
+	"prettier.singleQuote": true, //是否使用单引号
+	"prettier.trailingComma": "all",
+	"editor.unicodeHighlight.nonBasicASCII": false,
+	"workbench.tree.renderIndentGuides": "always",
+	"editor.fontSize": 16,
+	"editor.minimap.enabled": false,
+	"prettier.bracketSameLine": true,
+	"prettier.arrowParens": "avoid",
+	"prettier.endOfLine": "auto",
+	"prettier.jsxSingleQuote": true,
+	"prettier.singleAttributePerLine": true,
+	"prettier.useTabs": true,
+	"prettier.vueIndentScriptAndStyle": true, //禁止随时添加逗号
+	// --------------------  prettier 配置  --------------------
+
+	// vim
+	"vim.leader": "<space>",
+
+	"vim.easymotion": false,
+	"vim.incsearch": true,
+	"vim.useSystemClipboard": true,
+	"vim.useCtrlKeys": false,
+	"vim.hlsearch": true,
+
+	"vim.insertModeKeyBindings": [
+		{
+			// jj -> ESC
+			"before": ["j", "j"],
+			"after": ["<Esc>"]
+		}
+	],
+	"vim.normalModeKeyBindingsNonRecursive": [
+		{
+			// H 跳到行首
+			"before": ["H"],
+			"after": ["^"]
+		},
+		{
+			// L 跳到行尾
+			"before": ["L"],
+			"after": ["$"]
+		}
+	],
+	"vim.normalModeKeyBindings": [
+		{
+			// Leader j -> 打开命令面板 CTRL shift p
+			"before": ["<leader>", "j"],
+			"commands": ["workbench.action.showCommands"]
+		},
+		{
+			// leader u -> 切换当前光标所在单词的大小写
+			"before": ["<leader>", "u"],
+			"after": ["v", "i", "w", "~", "<Esc>"]
+		},
+		{
+			// normal mode u -> ~ 改变当前大小写
+			"before": ["u"],
+			"after": ["~"]
+		}
+	],
+
+	// make yL dH work like y$ d^
+	"vim.operatorPendingModeKeyBindings": [
+		{
+			// H 跳到行首
+			"before": ["H"],
+			"after": ["^"]
+		},
+		{
+			// L 跳到行尾
+			"before": ["L"],
+			"after": ["$"]
+		}
+	],
+	"workbench.colorTheme": "Default Light Modern"
+	// vim
+}
+
