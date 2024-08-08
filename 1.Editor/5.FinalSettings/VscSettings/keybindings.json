@@ -1,0 +1,272 @@
+// 将键绑定放在此文件中以覆盖默认值
+[
+	{
+		"key": "ctrl+b",
+		"command": "workbench.files.action.focusFilesExplorer",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "a",
+		"command": "explorer.newFile",
+		"when": "filesExplorerFocus&&!inputFocus"
+	},
+	{
+		"key": "shift+a",
+		"command": "explorer.newFolder",
+		"when": "filesExplorerFocus && ! inputFocus"
+	},
+	{
+		"key": "c",
+		"command": "filesExplorer.copy",
+		"when": "filesExplorerFocus&&!inputFocus"
+	},
+	{
+		"key": "r",
+		"command": "renameFile",
+		"when": "filesExplorerFocus&&!inputFocus"
+	},
+	{
+		"key": "p",
+		"command": "filesExplorer.paste",
+		"when": "filesExplorerFocus&&!inputFocus"
+	},
+	{
+		"key": "d",
+		"command": "deleteFile",
+		"when": "filesExplorerFocus&&!inputFocus"
+	},
+	{
+		"key": "ctrl+d",
+		"command": "-extension.vim_ctrl+d",
+		"when": "editorTextFocus && vim.active && vim.use<C-d> && !inDebugRepl"
+	},
+
+	{
+		"key": "ctrl+t",
+		"command": "workbench.action.terminal.toggleTerminal",
+		"when": "terminal.active"
+	},
+	{
+		"key": "ctrl+shift+f",
+		"command": "-workbench.action.findInFiles"
+	},
+	{
+		"key": "alt+p",
+		"command": "-keybindings.editor.toggleSortByPrecedence",
+		"when": "inKeybindings"
+	},
+	{
+		"key": "alt+p",
+		"command": "-togglePreserveCase",
+		"when": "editorFocus"
+	},
+	{
+		"key": "alt+p",
+		"command": "-toggleSearchPreserveCase",
+		"when": "searchViewletFocus"
+	},
+	{
+		"key": "ctrl+p",
+		"command": "-workbench.action.quickOpen"
+	},
+	{
+		"key": "alt+oem_2",
+		"command": "editor.action.accessibleViewAcceptInlineCompletion",
+		"when": "accessibleViewIsShown && accessibleViewCurrentProviderId == 'inlineCompletions'"
+	},
+	{
+		"key": "alt+oem_2",
+		"command": "editor.action.commentLine",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+oem_2",
+		"command": "editor.action.blockComment",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+oem_2",
+		"command": "-editor.action.accessibleViewAcceptInlineCompletion",
+		"when": "accessibleViewIsShown && accessibleViewCurrentProviderId == 'inlineCompletions'"
+	},
+	{
+		"key": "ctrl+oem_2",
+		"command": "-editor.action.commentLine",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "alt+0",
+		"command": "-workbench.action.lastEditorInGroup"
+	},
+	{
+		"key": "alt+z",
+		"command": "-editor.action.toggleWordWrap"
+	},
+	{
+		"key": "ctrl+shift+o",
+		"command": "-workbench.action.terminal.openDetectedLink",
+		"when": "terminalFocus && terminalHasBeenCreated"
+	},
+	{
+		"key": "ctrl+shift+o",
+		"command": "-workbench.action.gotoSymbol",
+		"when": "!accessibilityHelpIsShown && !accessibleViewIsShown"
+	},
+	{
+		"key": "ctrl+shift+o",
+		"command": "-editor.action.accessibleViewGoToSymbol",
+		"when": "accessibilityHelpIsShown && accessibleViewGoToSymbolSupported || accessibleViewGoToSymbolSupported && accessibleViewIsShown"
+	},
+	{
+		"key": "ctrl+k shift+o",
+		"command": "-workbench.action.compareEditor.openSide",
+		"when": "inDiffEditor"
+	},
+	{
+		"key": "ctrl+shift+o",
+		"command": "workbench.action.files.openFolder",
+		"when": "openFolderWorkspaceSupport"
+	},
+	{
+		"key": "ctrl+k ctrl+o",
+		"command": "-workbench.action.files.openFolder",
+		"when": "openFolderWorkspaceSupport"
+	},
+	{
+		"key": "ctrl+shift+o",
+		"command": "workbench.action.files.openLocalFolder",
+		"when": "remoteFileDialogVisible"
+	},
+	{
+		"key": "ctrl+k ctrl+o",
+		"command": "-workbench.action.files.openLocalFolder",
+		"when": "remoteFileDialogVisible"
+	},
+	{
+		"key": "ctrl+shift+q",
+		"command": "-workbench.action.quickOpenNavigatePreviousInViewPicker",
+		"when": "inQuickOpen && inViewsPicker"
+	},
+	{
+		"key": "ctrl+r",
+		"command": "-workbench.action.quickOpenNavigateNextInRecentFilesPicker",
+		"when": "inQuickOpen && inRecentFilesPicker"
+	},
+	{
+		"key": "ctrl+r",
+		"command": "-workbench.action.openRecent"
+	},
+	{
+		"key": "ctrl+r",
+		"command": "-workbench.action.terminal.runRecentCommand",
+		"when": "accessibilityModeEnabled && terminalFocus && terminalHasBeenCreated || accessibilityModeEnabled && terminalFocus && terminalProcessSupported || accessibilityModeEnabled && accessibleViewIsShown && terminalHasBeenCreated && accessibleViewCurrentProviderId == 'terminal' || accessibilityModeEnabled && accessibleViewIsShown && terminalProcessSupported && accessibleViewCurrentProviderId == 'terminal'"
+	},
+	{
+		"key": "ctrl+r",
+		"command": "-extension.vim_ctrl+r",
+		"when": "editorTextFocus && vim.active && vim.use<C-r> && !inDebugRepl"
+	},
+	{
+		"key": "ctrl+r",
+		"command": "workbench.files.action.refreshFilesExplorer"
+	},
+	{
+		"key": "ctrl+t",
+		"command": "-workbench.action.showAllSymbols"
+	},
+	{
+		"key": "ctrl+t",
+		"command": "-extension.vim_ctrl+t",
+		"when": "editorTextFocus && vim.active && vim.use<C-t> && !inDebugRepl"
+	},
+	{
+		"key": "ctrl+oem_4",
+		"command": "-editor.action.outdentLines",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+oem_4",
+		"command": "-extension.vim_ctrl+[",
+		"when": "editorTextFocus && vim.active && vim.use<C-[> && !inDebugRepl"
+	},
+	{
+		"key": "alt+z",
+		"command": "-workbench.action.terminal.sizeToContentWidth",
+		"when": "terminalFocus && terminalHasBeenCreated && terminalIsOpen || terminalFocus && terminalIsOpen && terminalProcessSupported"
+	},
+	{
+		"key": "ctrl+oem_4",
+		"command": "editor.fold",
+		"when": "editorTextFocus && foldingEnabled"
+	},
+	{
+		"key": "ctrl+shift+oem_4",
+		"command": "-editor.fold",
+		"when": "editorTextFocus && foldingEnabled"
+	},
+	{
+		"key": "ctrl+oem_4",
+		"command": "notebook.fold",
+		"when": "notebookEditorFocused && !inputFocus && activeEditor == 'workbench.editor.notebook'"
+	},
+	{
+		"key": "ctrl+shift+oem_4",
+		"command": "-notebook.fold",
+		"when": "notebookEditorFocused && !inputFocus && activeEditor == 'workbench.editor.notebook'"
+	},
+	{
+		"key": "ctrl+oem_6",
+		"command": "editor.unfold",
+		"when": "editorTextFocus && foldingEnabled"
+	},
+	{
+		"key": "ctrl+shift+oem_6",
+		"command": "-editor.unfold",
+		"when": "editorTextFocus && foldingEnabled"
+	},
+	{
+		"key": "ctrl+oem_6",
+		"command": "notebook.unfold",
+		"when": "notebookEditorFocused && !inputFocus && activeEditor == 'workbench.editor.notebook'"
+	},
+	{
+		"key": "ctrl+shift+oem_6",
+		"command": "-notebook.unfold",
+		"when": "notebookEditorFocused && !inputFocus && activeEditor == 'workbench.editor.notebook'"
+	},
+	{
+		"key": "ctrl+oem_6",
+		"command": "-editor.action.indentLines",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+k ctrl+oem_6",
+		"command": "-editor.unfoldRecursively",
+		"when": "editorTextFocus && foldingEnabled"
+	},
+	{
+		"key": "ctrl+oem_6",
+		"command": "-extension.vim_ctrl+]",
+		"when": "editorTextFocus && vim.active && vim.use<C-]> && !inDebugRepl"
+	},
+	{
+		"key": "ctrl+shift+oem_4",
+		"command": "editor.foldAll",
+		"when": "editorTextFocus && foldingEnabled"
+	},
+	{
+		"key": "ctrl+k ctrl+0",
+		"command": "-editor.foldAll",
+		"when": "editorTextFocus && foldingEnabled"
+	},
+	{
+		"key": "ctrl+shift+oem_6",
+		"command": "editor.unfoldAll",
+		"when": "editorTextFocus && foldingEnabled"
+	},
+	{
+		"key": "ctrl+k ctrl+j",
+		"command": "-editor.unfoldAll",
+		"when": "editorTextFocus && foldingEnabled"
+	}
+]
